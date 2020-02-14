@@ -1,0 +1,441 @@
+.tree {
+  position: relative;
+  top: 40px;
+  left: 0;
+  padding-bottom: 200px;
+}
+
+.behaviour-row {
+  display: block;
+  margin: 20px 0;
+
+  text-align: center;
+  white-space: nowrap;
+
+  &:last-child {
+    padding-bottom: 150px;
+  }
+
+  .behaviour {
+    display: inline-block;
+    min-width: 300px;
+    text-align: left;
+
+    .remove-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 25px;
+      height: 25px;
+      padding: 5px;
+
+      text-align: center;
+      line-height: 14px;
+      cursor: default;
+      font-family: sans-serif;
+
+      &:hover {
+        background-color: #AAA;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    .behaviour-head {
+      position: relative;
+      padding: 10px 10px 5px;
+
+      color: #FFF;
+      background-color: #000;
+
+      .behaviour-id {
+        display: block;
+        font-size: .8em;
+        font-weight: bold;
+        outline: none;
+        margin-bottom: 5px;
+      }
+
+      .force-start-btn {
+        margin: 8px 0 10px;
+        input[type=checkbox] {
+          display: none;
+
+          &+label {
+            margin: 2px;
+            padding: 3px 10px;
+            flex-shrink: 0;
+
+            font-size: .8em;
+            border: 1px solid #FFF;
+          }
+
+          &:checked+label {
+            background-color: #FFF;
+            color: #000;
+          }
+        }
+      }
+
+      details {
+        margin: 0 0 10px;
+        font-size: .9em;
+
+        padding: 0 10px;
+
+        summary {
+          outline: none;
+        }
+      }
+
+      .behaviour-action {
+        width: 100%;
+
+        margin-bottom: 5px;
+        font-family: "Courier New";
+        font-size: 1em;
+
+        color: #FFF;
+        background-color: #000;
+        border: none;
+        outline: none;
+
+        &:hover {
+          outline: 1px solid #FFF;
+        }
+      }
+
+      .behaviour-code {
+        width: 100%;
+
+        margin: 5px 0 -5px 0;
+        font-family: "Courier New";
+        font-size: .9em;
+
+        color: #FFF;
+        background-color: #000;
+        border: none;
+        outline: none;
+
+        &:hover {
+          outline: 1px solid #FFF;
+        }
+      }
+    }
+
+    .outs-row {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .out-wrapper {
+        position: relative;
+        width: 100%;
+        color: #FFF;
+        background-color: #000;
+        padding: 10px;
+
+        border-top: 2px dashed #FFF;
+
+        &:not(:last-child) {
+          margin-right: 2px;
+        }
+
+        .remove-out {
+
+        }
+
+        .out-params {
+          margin: 0;
+        }
+
+        .out-title {
+          display: block;
+          font-size: .8em;
+          font-weight: bold;
+          outline: none;
+        }
+
+        .new-behaviour {
+          margin-top: 15px;
+          border: 1px solid #FFF;
+
+          text-align: center;
+          cursor: default;
+
+          &:hover {
+            background-color: #AAA;
+          }
+        }
+      }
+
+      .out-condition {
+        width: 100%;
+        margin: 10px 0 5px;
+
+        font-family: "Courier New";
+        font-size: 1em;
+
+        color: #FFF;
+        background-color: #000;
+        border: none;
+        outline: none;
+
+        &:hover {
+          outline: 1px solid #FFF;
+        }
+      }
+
+      details {
+        margin: 5px 0 0 0;
+        font-size: .9em;
+
+        summary {
+          outline: none;
+        }
+      }
+
+      .delay-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+
+        input[type=checkbox] {
+          display: none;
+
+          &+label {
+            margin: 2px;
+            padding: 3px 10px;
+            flex-shrink: 0;
+
+            font-size: .8em;
+            border: 1px solid #FFF;
+          }
+
+          &:checked+label {
+            background-color: #FFF;
+            color: #000;
+          }
+        }
+
+        label {
+          display: inline-flex;
+          flex-shrink: 1;
+          font-size: .9em;
+          padding: 0 10px;
+        }
+
+        input[type=number] {
+          width: 40px;
+          max-width: 75px;
+
+          background-color: #000;
+          color: #FFF;
+          border: none;
+          font-size: .9em;
+
+          text-align: left;
+          outline: none;
+
+          &:hover {
+            outline: 1px solid #FFF;
+          }
+        }
+      }
+
+      .out-code {
+        width: 100%;
+        margin: 10px 0 5px;
+
+        font-family: "Courier New";
+        font-size: 1em;
+
+        color: #FFF;
+        background-color: #000;
+        border: none;
+        outline: none;
+
+        &:hover {
+          outline: 1px solid #FFF;
+        }
+      }
+
+      .labels {
+        width: 100%;
+
+        h5 {
+          font-weight: bold;
+          margin: 5px 0px 0px;
+          padding: 3px 10px 0;
+        }
+
+        .label {
+          display: flex;
+          flex-direction: row;
+
+          margin-top: 5px;
+
+          background-color: #FFF;
+
+          textarea {
+            border: none;
+            outline: none;
+            width: 100%;
+            margin: 1px 0;
+
+            background-color: #FFF;
+            color: #000;
+            border: none;
+          }
+
+          .locale {
+            flex-shrink: 0;
+            appearance: none;
+            outline: none;
+            padding: 5px 7px;
+            margin: 0;
+
+            background-color: #000;
+            color: #fff;
+            border-radius: 0;
+            border: 1px solid #FFF;
+            text-align: center;
+            text-transform: uppercase;
+          }
+
+          .erase-btn {
+            flex-shrink: 0;
+            margin: 1px 1px 1px 0;
+            padding: 1px 8px 0px;
+
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            font-family: sans-serif;
+            font-weight: lighter;
+            font-size: .8em;
+
+            background-color: #000;
+            cursor: default;
+
+            &:hover {
+              background-color: #AAA;
+            }
+          }
+        }
+
+        .add-label {
+          margin: 5px 0px 0;
+          padding: 0;
+
+          font-size: .8em;
+          text-align: center;
+          border: 1px solid #FFF;
+          font-weight: bold;
+
+          cursor: default;
+
+          &:hover {
+            background-color: #AAA;
+          }
+        }
+      }
+
+      .next-behaviour {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px -10px 0;
+        padding: 10px 10px 0;
+        border-top: 1px dashed #FFF;
+
+        font-size: .8em;
+
+        span {
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+
+        .btn {
+          width: 40%;
+          flex-shrink: 1;
+          border: 1px solid #FFF;
+          margin-left: 10px;
+          text-align: center;
+          padding: 3px;
+          cursor: default;
+          height: 23px;
+
+          &:hover {
+            background-color: #AAA;
+          }
+
+          &.erase-behaviour {
+            flex-shrink: 0;
+            width: 23px;
+            font-size: .8em;
+            line-height: 15px;
+          }
+        }
+
+        .existing-behaviour {
+          appearance: none;
+          width: 40%;
+          min-height: 23px;
+          flex-shrink: 1;
+          margin-left: 10px;
+          padding: 3px;
+
+          border: 1px solid #FFF;
+          background-color: #000;
+          color: #FFF;
+          outline: 0;
+
+          text-align: center;
+          font-family: "Courier New";
+          font-size: .9em;
+
+          &:hover:not(:focus) {
+            background-color: #AAA;
+          }
+        }
+
+        .behaviour-id {
+          width: 100%;
+          margin-left: 10px;
+
+          font-weight: bold;
+        }
+      }
+    }
+
+    .new-out {
+      display: flex;
+      width: 15px;
+      min-height: 30px;
+
+      flex-shrink: 0;
+
+      align-items: center;
+
+      color: #FFF;
+      background-color: #000;
+      border-top: 2px dashed #FFF;
+      cursor: default;
+
+      div {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background-color: #AAA;
+      }
+    }
+  }
+}
